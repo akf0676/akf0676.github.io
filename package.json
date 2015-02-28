@@ -1,0 +1,27 @@
+{
+  "name": "code-lab",
+  "version": "1.0.0",
+  "description": "Code Lab Examples",
+  "title": "I need to think of a catchy title",
+  "homepage": "https://github.com/akf0676/code-lab",
+  "url": "https://github.com/akf0676/",
+  "author": "AFarmer",
+  "copyright": "2015",
+  "license": "GNU",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akf0676/code-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akf0676/code-lab/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint-stylish": "latest"
+  }
+}

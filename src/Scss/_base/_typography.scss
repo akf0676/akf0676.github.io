@@ -1,0 +1,42 @@
+// Default Font Stack
+$defaultFont:					Calibri, sans-serif;
+
+// Line Heights
+$defaultLineHeight:				1.5em;
+
+// Font Sizes
+$baseFontSize:					16px;
+
+$portraitTabletBaseFontSize:	18px;
+
+$smallPrint:					0.8em;
+
+$emphasis: 						18px;
+
+$h2FontSizeWeb: 				1.4em;
+$h5FontSizeWeb: 				1.2em;
+
+
+@mixin semiBoldFontSize() {
+	font-family: Calibri, sans-serif;
+	font-weight: 500;
+}
+
+@mixin normalFontSize() {
+	font-family: $defaultFont;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {	
+	line-height: 1.4em;
+	font-weight: 400;
+}
+
+h1 {
+  line-height: 1.5em;
+}

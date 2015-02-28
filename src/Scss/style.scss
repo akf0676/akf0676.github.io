@@ -1,0 +1,55 @@
+// Import Quatro Dependancies (non-theme specific)
+@import "_includes/dependancies";
+
+// Functions utils
+//@import "_functions/calcPercent";
+
+// Import Normalize
+@import "_base/normalize";
+
+// Import Defaults and Base Styling
+@import "_base/base";
+
+body {
+	/*
+	 * Typography
+	 */
+	font: 100% $defaultFont;
+	font-size: $baseFontSize;
+	line-height: $defaultLineHeight;
+	color: $primaryFontColour;
+	position: relative;
+
+	/*
+	 * Block level
+	 */
+
+	background: url(/themes/sov/images/pageElements/background/maze-bg.png) no-repeat fixed top center $white;
+
+	@include breakpoint(portraitTablets) {
+		font-size: $portraitTabletBaseFontSize;
+	}
+
+	/*
+	 * Set the min-width for Javascript hooks on
+	 * different breakpoints
+	 */
+	 @include breakpoint(portraitTablets) {
+	 	min-width: $portraitTablets;
+	 }
+}
+
+// Import element buttons
+@import "_elements/buttons";
+
+// Import element forms
+@import "_elements/forms";
+
+// Import module header
+@import "_modules/header";
+
+// Import module navigation
+@import "_modules/navigation";
+
+// Import module footer
+@import "_modules/footer";

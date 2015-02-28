@@ -1,0 +1,60 @@
+// Media Queries
+// Mixin for setting all the breakpoints. Allows us to change the breakpoints here and here only. Needs SASS >= SASS 3.2 due to content blocks support.
+
+$largeDisplay:		1200px !default;
+$defaultDisplay:	980px !default;
+$portraitTablets:	768px !default;
+$phonesToTablets:	767px !default;
+$phones:			480px !default;
+
+@mixin breakpoint($breakpoint) {
+
+	@if $breakpoint == phones {
+		@media (max-width: $phones) {
+			@content;
+		}
+	} @else if $breakpoint == phonesToTablets {
+		@media (max-width: $phonesToTablets) {
+			@content;
+		}
+	} @else if $breakpoint == navbarCollapse {
+		@media (max-width: $navbarCollapseWidth) {
+			@content;
+		}
+	} @else if $breakpoint == portraitTablets {
+		@media (min-width: $portraitTablets) and (max-width: $defaultDisplay) {
+			@content
+		}
+	} @else if $breakpoint == defaultDisplay {
+		@media (min-width: $defaultDisplay) and (max-width: $largeDisplay) {
+			@content;
+		}
+	} @else if $breakpoint == largeDisplay {
+		@media (min-width: $largeDisplay) {
+			@content;
+		}
+	} @else if $breakpoint == lessThanLarge{
+		@media (max-width: $largeDisplay) {
+			@content
+		}
+	} @else if $breakpoint == lessThanDefault{
+		@media (max-width: $defaultDisplay - 1) {
+			@content
+		}
+	} @else if $breakpoint == defaultOrLarger{
+		@media (min-width: $defaultDisplay) {
+			@content
+		}
+	} @else if $breakpoint == portraitTabletsOrLarger{
+		@media (min-width: $portraitTablets) {
+			@content
+		}
+	} @else if $breakpoint == media{
+		//media breakpoint ensures that only browsers which support media queries (and css3) apply these styles
+		@media (min-width:0){
+			@content
+		}
+	} @else {
+		@content;
+	}
+}

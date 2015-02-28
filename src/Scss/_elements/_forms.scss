@@ -1,0 +1,36 @@
+label {
+	
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+	
+	box-sizing: border-box;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+	select {
+
+	}
+}
+
+/*
+ * Radio button styling
+ *
+ * Checkbox button styling
+ * TODO: Update the Holiday Options to use this version.
+ */
+input[type="radio"],
+input[type="checkbox"] {
+
+}
+
+input.errored,
+select.errored {
+	border: 1px solid $formsError;
+}

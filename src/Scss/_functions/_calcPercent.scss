@@ -1,0 +1,14 @@
+/**
+ * #Calculate a percentage value from a pixel value
+ *
+ * $width - pixel value (width you want to turn into a percentage
+ * $content - content width (defaults to the size $contentWidth)
+ *
+ * ##Example
+ * ```
+ * .content{width: calcPercent(500px);}
+ * ```
+ */
+@function calcPercent($width, $content: $contentWidth) {
+	@return ($width / $contentWidth) * 100%;
+}

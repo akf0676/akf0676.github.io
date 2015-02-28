@@ -1,0 +1,48 @@
+/**
+ * Call to actions
+ *
+ */
+button,
+.button {
+	colour: red;
+	@include breakpoint(portraitTablets) {
+		
+	}
+	&:hover {
+		color: pink;
+	}
+	
+	// Secondary
+	 &.secondary {
+	 	colour: light(red,80%);
+	 	
+	 	&:hover {
+	 	
+	 	}
+	 }
+	// Tertiary
+	 &.tertiary {
+	 	colour: light(red,80%);
+	 	
+	 	&:hover {
+	 	
+	 	}
+	 }
+	// Positions
+	&.right {
+		float: right;
+	}
+	&.left {
+		float: left;
+	}
+	&.center {
+		float: none !important;
+	} 
+	// Button sizes
+	&.large {
+		
+	}
+	&.full {
+		
+	}
+}

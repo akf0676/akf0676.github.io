@@ -1,0 +1,1 @@
+var magic2 = true;
