@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Local Machine Setup</title>
+</head>
+<body>
+	<ul>
+		<li>Software Updates</li>
+		<li>GitHub - dotfiles</li>
+		<li>java-update - created from https://www.monkehworks.com/set-java-7-as-default-jvm-on-mac-osx-mountain-lion/</li>
+		<li>JSON Editor Eclipse - https://marketplace.eclipse.org/content/json-editor-plugin</li>
+	</ul>
+	<h2>Apache</h2>
+	<ol>
+		<li>Edit Hosts - add 127.0.0.1 - point to local instance</li>
+		<li>
+			Edit httpd.conf in /etc/apache2
+			<ul>
+				<li>Uncomment vhosts</li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+		<li>
+			Edit /extra/vhosts
+			<ul>
+				<li>Delete one of the default entries</li>
+				<li>Edit details / Servername / Server Location</li>
+				<li>Edit log locations and name</li>
+				<li>Due to default permissions on inbuilt apache need to add <br /><br />
+					<code><Directory "/Users/Jason/Documents/workspace/jason.pureconcepts.net/htdocs">
+            AllowOverride All
+            Require all granted
+        </Directory></code>
+				
+				
+			</ul>
+		</li>
+		<li></li>
+	</ol>
+</body>
+</html>
+
+
