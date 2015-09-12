@@ -3,14 +3,79 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Web Development Experiment - 001 Shuffle between page images with animated states</title>
+	<style>
+		.carousel {
+			position: relative;
+		}
+		
+		.carousel .changing {
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			left: 0;
+		}
+		
+		.carousel .two {
+			animation: animate-five-two 9s infinite forwards linear;
+		}
+		
+		.carousel .three {
+			animation: animate-five-three 9s infinite forwards linear;
+		}
+		
+		.carousel .four {
+			animation: animate-five-four 9s infinite forwards linear;
+		}
+		
+		.carousel .five {
+			animation: animate-five-five 9s infinite forwards linear;
+		}
+		
+		@keyframes animate-five-two  {
+			0% {opacity:0;}
+			15% {opacity:0;}
+			20% {opacity:1;} 
+			90% {opacity:1;} 
+			95% {opacity:0;} 
+		}
+		@keyframes animate-five-three  {
+			0% {opacity:0;}
+			35% {opacity:0;}
+			40% {opacity:1;} 
+			90% {opacity:1;} 
+			95% {opacity:0;} 
+		}
+		@keyframes animate-five-four  {
+			0% {opacity:0;}
+			55% {opacity:0;}
+			60% {opacity:1;} 
+			90% {opacity:1;} 
+			95% {opacity:0;} 
+		}
+		@keyframes animate-five-five  {
+			0% {opacity:0;}
+			75% {opacity:0;}
+			80% {opacity:1;} 
+			95% {opacity:1;} 
+			100% {opacity:0;} 
+		}
+	</style>
 </head>
 <body>
+	<h1>Image Carousel - No Javascript CSS3 Animation</h1>
+	<p>
+		This is based on the assumption that all images are the same size.
+		We will use keyframes to animate.
+	</p>
+	<p>
+		To tweak the speed of the carousel change over - adjust the CSS class on the individual images.
+	</p>
 	<div class="carousel">
-		<img src="experiment-assets/wd-lab01/IMG_0315.JPG" alt="Darth Vader" class="one" />
-		<img src="experiment-assets/wd-lab01/IMG_0316.JPG" alt="R2-D2" class="two changing" />
-		<img src="experiment-assets/wd-lab01/IMG_0317.JPG" alt="Battle of Naboo" class="three changing" />
-		<img src="experiment-assets/wd-lab01/IMG_0319.JPG" alt="Naboo Royal N-1 starfighter" class="four changing" />
-		<img src="experiment-assets/wd-lab01/IMG_0320.JPG" alt="Battle of Naboo - part 2" class="five changing" />
+		<img src="/experiment-assets/wd-lab01/IMG_0315.jpg" alt="Darth Vader" class="one" />
+		<img src="/experiment-assets/wd-lab01/IMG_0316.jpg" alt="R2-D2" class="two changing" />
+		<img src="/experiment-assets/wd-lab01/IMG_0317.jpg" alt="Battle of Naboo" class="three changing" />
+		<img src="/experiment-assets/wd-lab01/IMG_0319.jpg" alt="Naboo Royal N-1 starfighter" class="four changing" />
+		<img src="/experiment-assets/wd-lab01/IMG_0320.jpg" alt="Battle of Naboo - part 2" class="five changing" />
 	</div>
 </body>
 </html>
