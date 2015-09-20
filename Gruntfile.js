@@ -7,12 +7,13 @@
  * @description our wrapper function (required by grunt and its plugins) all configuration goes inside this function
  * 
  */
-'use strict';
+
 /**
  * Grunt Module
  */
+/*global module:true */
 module.exports = function(grunt) {
-
+	'use strict';
   // ===========================================================================
   // CONFIGURE GRUNT ===========================================================
   // ===========================================================================
@@ -29,10 +30,8 @@ module.exports = function(grunt) {
     	  src: 'src',
     	  css: [
     	    '<%= project.src %>/scss/style.scss'
+    	   
     	  ],
-    	  js: [
-    	    '<%= project.src %>/js/*.js'
-    	  ]
     },
     /**
      * Project banner
@@ -51,7 +50,7 @@ module.exports = function(grunt) {
     	      sourcemap: 'none',
     	    },
     	    files: {
-    	      'css/style.css': '<%= project.css %>'
+    	    	'css/style.css': '<%= project.css %>'
     	    }
     	  },
     	  dist: {
@@ -84,7 +83,7 @@ module.exports = function(grunt) {
 	  },
 	
 	  // when this task is run, lint the Gruntfile and all js files in src
-	  build: ['Gruntfile.js', '<%= project.js %>']
+	  build: ['Gruntfile.js']
 	},
   
 	// Uglify
@@ -97,8 +96,20 @@ module.exports = function(grunt) {
 	          'js/<%= pkg.name %>.min.js': ['src/js/magic.js', 'src/js/magic2.js']
 	        }
 	      }
-	 }  	
+	 },  	
   
+	// Scss Lint
+	scsslint: {
+	    allFiles: [
+	      'src/Scss/*.scss',
+	    ],
+	    options: {
+	      bundleExec: false,
+	      config: 'src/.scss-lint.yml',
+	      reporterOutput: 'scss-lint-report.xml',
+	      colorizeOutput: true
+	    },
+	  }
   });
 
   // ===========================================================================
@@ -111,6 +122,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-scss-lint');
   
   /**
    * Default task

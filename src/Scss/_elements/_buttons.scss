@@ -2,8 +2,7 @@
  * Call to actions
  *
  */
-button,
-.button {
+button{
 	colour: red;
 	@include breakpoint(portraitTablets) {
 		
@@ -28,16 +27,7 @@ button,
 	 	
 	 	}
 	 }
-	// Positions
-	&.right {
-		float: right;
-	}
-	&.left {
-		float: left;
-	}
-	&.center {
-		float: none !important;
-	} 
+	
 	// Button sizes
 	&.large {
 		

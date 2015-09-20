@@ -1,4 +1,4 @@
-// Import Quatro Dependancies (non-theme specific)
+// Import Scss Dependancies (non-theme specific)
 @import "_includes/dependancies";
 
 // Functions utils
@@ -11,29 +11,19 @@
 @import "_base/base";
 
 body {
-	/*
-	 * Typography
-	 */
+	// Block level
+
+	color: $primaryFontColour;
 	font: 100% $defaultFont;
 	font-size: $baseFontSize;
 	line-height: $defaultLineHeight;
-	color: $primaryFontColour;
 	position: relative;
-
-	/*
-	 * Block level
-	 */
-
-	background: url(/themes/sov/images/pageElements/background/maze-bg.png) no-repeat fixed top center $white;
-
+	
 	@include breakpoint(portraitTablets) {
 		font-size: $portraitTabletBaseFontSize;
 	}
 
-	/*
-	 * Set the min-width for Javascript hooks on
-	 * different breakpoints
-	 */
+	// Set the min-width for Javascript hooks on different breakpoints
 	 @include breakpoint(portraitTablets) {
 	 	min-width: $portraitTablets;
 	 }
